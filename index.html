@@ -142,8 +142,9 @@ textarea { width: 100%; min-height: 120px; background: var(--bg); color: var(--f
       </div>
       <section class="panel" id="sendPanel">
         <h3>Send your picks</h3>
-        <p id="sendText">When you're done (or anytime), copy your picks and text them to Michael.</p>
-        <button class="primary" id="copyBtn" type="button">Copy my picks</button>
+        <p id="sendText">When you're done, tap send. Isosceles gets your picks directly. You can send again later if you change anything.</p>
+        <button class="primary" id="sendBtn" type="button">Send my picks to Isosceles</button>
+        <button class="ghost" id="copyBtn" type="button">Or copy them as text</button>
         <textarea id="copyBox" readonly hidden></textarea>
         <div class="status" id="status"></div>
       </section>
@@ -240,7 +241,7 @@ textarea { width: 100%; min-height: 120px; background: var(--bg); color: var(--f
     const empty = $("empty");
     if (!q.length) {
       empty.hidden = false; empty.innerHTML = "";
-      empty.append(el("strong", null, "All done"), el("span", null, "Tap Copy my picks below and text them to " + (who === "Michael" ? "Isosceles on Discord." : "Michael.")));
+      empty.append(el("strong", null, "All done"), el("span", null, "Your picks go to Isosceles automatically. Check the note under the Send button says Sent; if not, tap Send."));
     } else {
       empty.hidden = true;
       if (q[1]) { const u = cardFor(q[1]); u.classList.add("under"); stage.append(u); }
@@ -275,6 +276,7 @@ textarea { width: 100%; min-height: 120px; background: var(--bg); color: var(--f
     }
     votes.set(show.id, dir); history.push(show.id); if (requeue === show.id) requeue = null;
     save(); render(); busy = false;
+    if (votes.size === shows.length && load("tvswipe:sent:" + who) !== String(votes.size)) send(true);
   }
   function undo() { const id = history.pop(); if (!id) return; votes.delete(id); requeue = id; save(); render(); }
 
@@ -331,6 +333,22 @@ textarea { width: 100%; min-height: 120px; background: var(--bg); color: var(--f
     lines.push("", "code " + who + " " + code);
     return lines.join("\n");
   }
+  const TOPIC = "tvn-02a1582acc14220e422c4f0b";
+  async function send(auto) {
+    const initial = who === "Elizabeth" ? "E" : "M";
+    const code = shows.filter((s) => votes.has(s.id)).map((s) => s.id + ":" + CODE[votes.get(s.id)]).join(",");
+    const body = "code " + initial + " " + votes.size + "/" + shows.length + " " + code;
+    $("status").textContent = "Sending...";
+    try {
+      const r = await fetch("https://ntfy.sh/" + TOPIC, { method: "POST", body, headers: { Title: "tv-night " + initial } });
+      if (!r.ok) throw new Error(r.status);
+      store("tvswipe:sent:" + who, String(votes.size));
+      $("status").textContent = "Sent " + votes.size + " picks to Isosceles." + (auto ? " (sent automatically when you finished)" : "");
+    } catch (e) {
+      $("status").textContent = "Couldn't send. Check your connection and tap Send again, or copy them as text.";
+    }
+  }
+  $("sendBtn").onclick = () => send(false);
   $("copyBtn").onclick = async () => {
     const text = summary(); const box = $("copyBox");
     try { await navigator.clipboard.writeText(text); $("status").textContent = "Copied. Paste it in a text to " + (who === "Michael" ? "Isosceles." : "Michael."); box.hidden = true; }
@@ -346,7 +364,7 @@ textarea { width: 100%; min-height: 120px; background: var(--bg); color: var(--f
     $("bSolo").hidden = !solo; $("soloHint").hidden = !solo;
     $("actions").style.gridTemplateColumns = solo ? "repeat(4, 1fr)" : "repeat(3, 1fr)";
     $("switchWho").textContent = "Swiping as " + name + " · switch";
-    $("sendText").textContent = solo ? "Copy your picks and paste them to Isosceles on Discord." : "When you're done (or anytime), copy your picks and text them to Michael.";
+    $("sendText").textContent = "When you're done, tap send. Isosceles gets your picks directly. You can send again later if you change anything.";
     render();
   }
   $("switchWho").onclick = () => { $("deckUi").hidden = true; $("pickWho").hidden = false; who = null; };
