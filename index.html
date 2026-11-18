@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>TV Night Swipe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #0b0b12; --bg-2: #13131d; --card: #1a1a27; --line: #2a2a3b; --fg: #ecebf3; --dim: #9796a8;
+  --lamp: #f5c542; --yes: #3ecf8e; --no: #ff5d6c; --seen: #7aa7ff; --solo: #ffa94d; --s1: #d7a6ff;
+  --hbo: #9b5cf6; --netflix: #e50914; --apple: #8e9aaf; --prime: #00a8e1; --paramount: #2f7bff; --hulu: #1ce783;
+  --peacock: #f2b705; --starz: #c9c9d6; --mgm: #c8a24a; --cbs: #2f7bff;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background: radial-gradient(120% 70% at 50% -10%, #1d1a2c 0%, var(--bg) 60%) fixed, var(--bg);
+  color: var(--fg); font-family: var(--body); font-size: 14px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: max(18px, env(safe-area-inset-top, 0px)) 40px;
+  overscroll-behavior: none;
+}
+[hidden] { display: none !important; }
+.wrap { max-width: 440px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+h1 { font-family: var(--display); font-weight: 800; font-size: 1.5rem; margin: 0; letter-spacing: -0.01em; }
+h1 span { color: var(--lamp); }
+.count { color: var(--dim); font-size: .85rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.bar { height: 4px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--lamp); transition: width .25s; }
+.hint { color: var(--dim); font-size: .82rem; margin: 0; display: flex; gap: 12px; flex-wrap: wrap; }
+.hint b { font-weight: 600; } .hint .l { color: var(--no); } .hint .r { color: var(--yes); } .hint .u { color: var(--seen); } .hint .d { color: var(--solo); }
+
+.stage { position: relative; height: 530px; touch-action: none; }
+.card { position: absolute; inset: 0; background: linear-gradient(180deg, var(--card) 0%, var(--bg-2) 100%);
+  border: 1px solid var(--line); border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 12px;
+  box-shadow: 0 24px 60px -24px rgba(0,0,0,.8); user-select: none; -webkit-user-select: none; cursor: grab; will-change: transform; overflow: hidden; }
+.card.under { transform: scale(.95) translateY(14px); opacity: .55; pointer-events: none; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.plat { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 600; }
+.plat i { width: 10px; height: 10px; border-radius: 50%; background: var(--dim); }
+.kind { font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--dim); }
+.kind.airing { color: var(--yes); } .kind.soon { color: var(--seen); } .kind.binge { color: var(--lamp); } .kind.start, .kind.returning { color: var(--s1); }
+.head { display: grid; grid-template-columns: 104px 1fr; gap: 14px; align-items: start; }
+.head.noposter { grid-template-columns: 1fr; }
+.poster { width: 104px; aspect-ratio: 206 / 305; max-width: 100%; border-radius: 10px; object-fit: cover; background: var(--bg-2); border: 1px solid var(--line); pointer-events: none; -webkit-user-drag: none; }
+h2 { font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: 1.05; margin: 4px 0 0; text-wrap: balance; letter-spacing: -0.015em; overflow-wrap: anywhere; }
+.blurb { color: #cfcedd; font-size: .95rem; line-height: 1.5; margin: 0; }
+.facts { margin: auto 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.fact { background: rgba(255,255,255,.03); border: 1px solid var(--line); border-radius: 12px; padding: 8px 11px; min-width: 0; }
+.fact dt { font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); margin: 0 0 2px; }
+.fact dd { margin: 0; font-size: .9rem; font-weight: 500; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.fact.wide { grid-column: 1 / -1; }
+.fact.s1 { border-color: #4a3d5c; } .fact.s1 dt { color: var(--s1); }
+.stamp { position: absolute; top: 26px; font-family: var(--display); font-weight: 800; font-size: 1.6rem; padding: 4px 12px; border: 3px solid; border-radius: 10px; opacity: 0; pointer-events: none; background: rgba(11,11,18,.6); }
+.stamp.yes { right: 22px; color: var(--yes); transform: rotate(12deg); }
+.stamp.no { left: 22px; color: var(--no); transform: rotate(-12deg); }
+.stamp.seen { left: 50%; top: auto; bottom: 140px; translate: -50% 0; color: var(--seen); }
+.stamp.solo { left: 50%; top: 90px; translate: -50% 0; color: var(--solo); }
+
+.actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+button { font-family: var(--body); }
+.actions button { font-weight: 600; font-size: .9rem; color: var(--fg); background: var(--bg-2); border: 1px solid var(--line); border-radius: 16px; padding: 13px 4px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.actions button span { font-size: 1.3rem; line-height: 1; }
+.actions .no span { color: var(--no); } .actions .yes span { color: var(--yes); } .actions .seen span { color: var(--seen); } .actions .solo span { color: var(--solo); }
+.actions button:active { transform: scale(.97); }
+.actions button:disabled { opacity: .4; cursor: default; }
+button:focus-visible, input:focus-visible, li:focus-visible { outline: 2px solid var(--lamp); outline-offset: 2px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.ghost { background: none; border: 0; color: var(--dim); font-size: .88rem; cursor: pointer; padding: 6px 0; }
+.ghost:disabled { opacity: .35; cursor: default; }
+.primary { background: var(--lamp); color: #1a1405; border: 0; border-radius: 14px; padding: 14px 16px; font-weight: 600; font-size: 1rem; cursor: pointer; width: 100%; }
+.status { color: var(--dim); font-size: .8rem; text-align: right; }
+
+.panel { background: var(--bg-2); border: 1px solid var(--line); border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.panel h3 { font-family: var(--display); font-size: 1.2rem; margin: 0; }
+.panel p { margin: 0; color: #cfcedd; line-height: 1.5; }
+.who { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.who button { background: var(--card); color: var(--fg); border: 1px solid var(--line); border-radius: 14px; padding: 16px 8px; font-weight: 600; font-size: 1rem; cursor: pointer; }
+.empty { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; border: 1px dashed var(--line); border-radius: 22px; padding: 24px; color: var(--dim); }
+.empty strong { font-family: var(--display); font-size: 1.5rem; color: var(--fg); }
+
+.tally { display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+.tally h3 { font-family: var(--display); font-weight: 600; font-size: 1.05rem; margin: 0 0 6px; display: flex; gap: 8px; align-items: baseline; }
+.tally h3 em { font-style: normal; color: var(--dim); font-size: .85rem; font-variant-numeric: tabular-nums; }
+.tally ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.tally li { font-size: .82rem; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg-2); cursor: pointer; }
+.g-yes h3 { color: var(--yes); } .g-no h3 { color: var(--no); } .g-seen h3 { color: var(--seen); } .g-solo h3 { color: var(--solo); }
+.note { color: var(--dim); font-size: .8rem; margin: 0; }
+textarea { width: 100%; min-height: 120px; background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 12px; padding: 10px; font: .8rem/1.4 ui-monospace, Consolas, monospace; resize: vertical; }
+@media (prefers-reduced-motion: reduce) { .card, .bar i { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>TV Night <span>Swipe</span></h1>
+    <div class="count" id="count"></div>
+  </header>
+
+  <section class="panel" id="pickWho" hidden>
+    <h3>Who's swiping?</h3>
+    <p>Go through the shows Isosceles found for TV night. Swipe right for ones you want, left to cut, up if you've already seen it. Your answers stay on this phone until you send them.</p>
+    <div class="who"><button type="button" data-who="Elizabeth">Elizabeth</button><button type="button" data-who="Michael">Michael</button></div>
+  </section>
+
+  <div id="deckUi" hidden>
+    <div class="wrap">
+      <div class="bar"><i id="bar"></i></div>
+      <p class="hint"><span><b class="r">Right</b> want it</span><span><b class="l">Left</b> cut</span><span><b class="u">Up</b> seen it</span><span id="soloHint"><b class="d">Down</b> solo</span></p>
+      <div class="stage" id="stage"><div class="empty" id="empty" hidden></div></div>
+      <div class="actions" id="actions">
+        <button class="no" id="bNo" type="button"><span>✕</span>Cut</button>
+        <button class="seen" id="bSeen" type="button"><span>✓</span>Seen it</button>
+        <button class="solo" id="bSolo" type="button"><span>☺</span>Solo</button>
+        <button class="yes" id="bYes" type="button"><span>♥</span>Want it</button>
+      </div>
+      <div class="row">
+        <button class="ghost" id="undo" type="button" disabled>↶ Undo last</button>
+        <button class="ghost" id="switchWho" type="button"></button>
+      </div>
+      <section class="panel" id="sendPanel">
+        <h3>Send your picks</h3>
+        <p id="sendText">When you're done (or anytime), copy your picks and text them to Michael.</p>
+        <button class="primary" id="copyBtn" type="button">Copy my picks</button>
+        <textarea id="copyBox" readonly hidden></textarea>
+        <div class="status" id="status"></div>
+      </section>
+      <section class="tally" id="tally" hidden>
+        <p class="note">Tap a show to swipe it again.</p>
+        <div class="g-yes"><h3>Want it <em id="nYes">0</em></h3><ul id="lYes"></ul></div>
+        <div class="g-solo"><h3>Solo <em id="nSolo">0</em></h3><ul id="lSolo"></ul></div>
+        <div class="g-seen"><h3>Already seen <em id="nSeen">0</em></h3><ul id="lSeen"></ul></div>
+        <div class="g-no"><h3>Cut <em id="nNo">0</em></h3><ul id="lNo"></ul></div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script src="shows.js"></script>
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const shows = (window.SHOWS || []).slice().sort((a, b) => a.order - b.order);
+  const byId = new Map(shows.map((s) => [s.id, s]));
+  const CODE = { yes: "y", no: "n", seen: "s", solo: "o" };
+  const UNCODE = { y: "yes", n: "no", s: "seen", o: "solo" };
+  const kindLabel = { binge: "Ready to binge", airing: "Airing now", soon: "Dropping soon", start: "Start from S1", returning: "New season" };
+  let who = null; let votes = new Map(); let history = []; let requeue = null;
+
+  function store(k, v) { try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} }
+  function load(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function save() { store("tvswipe:" + who, JSON.stringify([...votes])); }
+
+  function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  const pct = (v) => (typeof v === "number" ? v + "%" : null);
+
+  function cardFor(s) {
+    const c = el("div", "card");
+    const top = el("div", "top"); const plat = el("span", "plat"); const dot = el("i");
+    dot.style.background = "var(--" + (s.p || "x") + ", var(--dim))";
+    plat.append(dot, document.createTextNode(s.platform || ""));
+    top.append(plat, el("span", "kind " + (s.kind || ""), kindLabel[s.kind] || ""));
+    const head = el("div", "head");
+    if (s.poster) { const img = el("img", "poster"); img.alt = s.title + " poster"; img.draggable = false; img.src = s.poster; img.onerror = () => { img.remove(); head.classList.add("noposter"); }; head.append(img); }
+    else head.classList.add("noposter");
+    const tt = el("div"); tt.append(el("h2", null, s.title)); head.append(tt);
+    c.append(top, head, el("p", "blurb", s.blurb || ""));
+    const facts = el("dl", "facts");
+    const add = (k, v, wide) => { if (!v) return; const f = el("div", "fact" + (wide ? " wide" : "")); f.append(el("dt", null, k), el("dd", null, v)); facts.append(f); };
+    const hasRt = typeof s.rtCritics === "number" || typeof s.rtAudience === "number";
+    const ss = s.rtSeason ? " · " + s.rtSeason : "";
+    add("Episodes", s.eps);
+    if (hasRt) { add("RT critics" + ss, pct(s.rtCritics) || "Not yet"); add("RT audience" + ss, pct(s.rtAudience) || "Not yet"); add("When", s.when); }
+    else { add("Reviews", s.score); add("When", s.when, true); }
+    if (typeof s.s1Critics === "number" || typeof s.s1Audience === "number") {
+      const f = el("div", "fact wide s1");
+      f.append(el("dt", null, "Season 1, if you'd start from the top"), el("dd", null, "RT critics " + (pct(s.s1Critics) || "n/a") + "  ·  audience " + (pct(s.s1Audience) || "n/a")));
+      facts.append(f);
+    }
+    c.append(facts);
+    c.append(el("div", "stamp yes", "WANT"), el("div", "stamp no", "CUT"), el("div", "stamp seen", "SEEN"), el("div", "stamp solo", "SOLO"));
+    return c;
+  }
+
+  function queue() {
+    const left = shows.filter((s) => !votes.has(s.id));
+    if (requeue && byId.has(requeue)) return [byId.get(requeue), ...left.filter((s) => s.id !== requeue)];
+    return left;
+  }
+
+  function render() {
+    const stage = $("stage");
+    stage.querySelectorAll(".card").forEach((n) => n.remove());
+    const q = queue(); const done = shows.filter((s) => votes.has(s.id)).length;
+    $("count").textContent = done + " of " + shows.length;
+    $("bar").style.width = (100 * done / shows.length) + "%";
+    ["bNo", "bSeen", "bYes", "bSolo"].forEach((b) => $(b).disabled = !q.length);
+    $("undo").disabled = !history.length;
+    const empty = $("empty");
+    if (!q.length) {
+      empty.hidden = false; empty.innerHTML = "";
+      empty.append(el("strong", null, "All done"), el("span", null, "Tap Copy my picks below and text them to " + (who === "Michael" ? "Isosceles on Discord." : "Michael.")));
+    } else {
+      empty.hidden = true;
+      if (q[1]) { const u = cardFor(q[1]); u.classList.add("under"); stage.append(u); }
+      const c = cardFor(q[0]); stage.append(c); drag(c, q[0]);
+    }
+    renderTally();
+  }
+
+  function renderTally() {
+    const groups = { yes: [], no: [], seen: [], solo: [] };
+    shows.forEach((s) => { const v = votes.get(s.id); if (v) groups[v].push(s); });
+    $("tally").hidden = !votes.size;
+    [["yes", "lYes", "nYes"], ["no", "lNo", "nNo"], ["seen", "lSeen", "nSeen"], ["solo", "lSolo", "nSolo"]].forEach(([k, l, n]) => {
+      const ul = $(l); ul.innerHTML = ""; $(n).textContent = groups[k].length;
+      groups[k].forEach((s) => {
+        const li = el("li", null, s.title); li.tabIndex = 0; li.setAttribute("role", "button");
+        const go = () => { requeue = s.id; render(); window.scrollTo({ top: 0, behavior: "smooth" }); };
+        li.addEventListener("click", go); li.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+        ul.append(li);
+      });
+    });
+  }
+
+  let busy = false;
+  async function vote(show, dir, card) {
+    if (busy) return; busy = true;
+    if (card) {
+      const x = dir === "yes" ? 520 : dir === "no" ? -520 : 0, y = dir === "seen" ? -620 : dir === "solo" ? 620 : 40;
+      card.style.transition = "transform .28s ease-in, opacity .28s";
+      card.style.transform = `translate(${x}px, ${y}px) rotate(${x / 20}deg)`; card.style.opacity = "0";
+      await new Promise((r) => setTimeout(r, 200));
+    }
+    votes.set(show.id, dir); history.push(show.id); if (requeue === show.id) requeue = null;
+    save(); render(); busy = false;
+  }
+  function undo() { const id = history.pop(); if (!id) return; votes.delete(id); requeue = id; save(); render(); }
+
+  function drag(card, show) {
+    let sx = 0, sy = 0, dx = 0, dy = 0, on = false;
+    const st = { yes: card.querySelector(".stamp.yes"), no: card.querySelector(".stamp.no"), seen: card.querySelector(".stamp.seen"), solo: card.querySelector(".stamp.solo") };
+    card.addEventListener("pointerdown", (e) => { if (busy) return; on = true; sx = e.clientX; sy = e.clientY; card.setPointerCapture(e.pointerId); card.style.transition = "none"; });
+    card.addEventListener("pointermove", (e) => {
+      if (!on) return; dx = e.clientX - sx; dy = e.clientY - sy;
+      card.style.transform = `translate(${dx}px, ${dy}px) rotate(${dx / 18}deg)`;
+      st.yes.style.opacity = Math.max(0, Math.min(1, dx / 90));
+      st.no.style.opacity = Math.max(0, Math.min(1, -dx / 90));
+      st.seen.style.opacity = Math.abs(dx) < 60 ? Math.max(0, Math.min(1, -dy / 110)) : 0;
+      st.solo.style.opacity = Math.abs(dx) < 60 ? Math.max(0, Math.min(1, dy / 110)) : 0;
+    });
+    const end = () => {
+      if (!on) return; on = false;
+      if (dx > 100) vote(show, "yes", card);
+      else if (dx < -100) vote(show, "no", card);
+      else if (dy < -120 && Math.abs(dx) < 80) vote(show, "seen", card);
+      else if (dy > 120 && Math.abs(dx) < 80) vote(show, "solo", card);
+      else { card.style.transition = "transform .2s"; card.style.transform = ""; Object.values(st).forEach((s) => s.style.opacity = 0); }
+      dx = dy = 0;
+    };
+    card.addEventListener("pointerup", end); card.addEventListener("pointercancel", end);
+  }
+
+  const top = () => queue()[0];
+  const topCard = () => { const cs = $("stage").querySelectorAll(".card:not(.under)"); return cs[cs.length - 1]; };
+  $("bYes").onclick = () => { const s = top(); if (s) vote(s, "yes", topCard()); };
+  $("bNo").onclick = () => { const s = top(); if (s) vote(s, "no", topCard()); };
+  $("bSeen").onclick = () => { const s = top(); if (s) vote(s, "seen", topCard()); };
+  $("bSolo").onclick = () => { const s = top(); if (s) vote(s, "solo", topCard()); };
+  $("undo").onclick = undo;
+  document.addEventListener("keydown", (e) => {
+    if (!who || (e.target.closest && e.target.closest("li, textarea, button"))) return;
+    const s = top(); if (!s) return;
+    if (e.key === "ArrowRight") vote(s, "yes", topCard());
+    else if (e.key === "ArrowLeft") vote(s, "no", topCard());
+    else if (e.key === "ArrowUp") { e.preventDefault(); vote(s, "seen", topCard()); }
+    else if (e.key === "ArrowDown") { e.preventDefault(); vote(s, "solo", topCard()); }
+  });
+
+  function summary() {
+    const name = (k) => shows.filter((s) => votes.get(s.id) === k).map((s) => s.title);
+    const code = shows.filter((s) => votes.has(s.id)).map((s) => s.id + ":" + CODE[votes.get(s.id)]).join(",");
+    const lines = [
+      "TV Night picks from " + who + " (" + votes.size + " of " + shows.length + ")",
+      "Want: " + (name("yes").join(", ") || "none"),
+      "Seen: " + (name("seen").join(", ") || "none"),
+    ];
+    if (name("solo").length) lines.push("Solo: " + name("solo").join(", "));
+    lines.push("Cut: " + (name("no").join(", ") || "none"));
+    lines.push("", "code " + who + " " + code);
+    return lines.join("\n");
+  }
+  $("copyBtn").onclick = async () => {
+    const text = summary(); const box = $("copyBox");
+    try { await navigator.clipboard.writeText(text); $("status").textContent = "Copied. Paste it in a text to " + (who === "Michael" ? "Isosceles." : "Michael."); box.hidden = true; }
+    catch (e) { box.hidden = false; box.value = text; box.focus(); box.select(); $("status").textContent = "Copy didn't work here. Select the text above and copy it."; }
+  };
+
+  function start(name) {
+    who = name; store("tvswipe:who", name);
+    votes = new Map(); history = []; requeue = null;
+    try { const raw = load("tvswipe:" + name); if (raw) votes = new Map(JSON.parse(raw).filter(([id, d]) => byId.has(id) && UNCODE[CODE[d]])); } catch (e) {}
+    $("pickWho").hidden = true; $("deckUi").hidden = false;
+    const solo = name === "Michael";
+    $("bSolo").hidden = !solo; $("soloHint").hidden = !solo;
+    $("actions").style.gridTemplateColumns = solo ? "repeat(4, 1fr)" : "repeat(3, 1fr)";
+    $("switchWho").textContent = "Swiping as " + name + " · switch";
+    $("sendText").textContent = solo ? "Copy your picks and paste them to Isosceles on Discord." : "When you're done (or anytime), copy your picks and text them to Michael.";
+    render();
+  }
+  $("switchWho").onclick = () => { $("deckUi").hidden = true; $("pickWho").hidden = false; who = null; };
+  document.querySelectorAll("[data-who]").forEach((b) => b.onclick = () => start(b.dataset.who));
+  const saved = load("tvswipe:who");
+  if (saved === "Elizabeth" || saved === "Michael") start(saved); else $("pickWho").hidden = false;
+})();
+</script>
+</body>
+</html>
