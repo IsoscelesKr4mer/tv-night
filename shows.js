@@ -82,7 +82,7 @@ window.SHOWS = [
 "trailer": "https://www.youtube.com/watch?v=UBSqPDxmNZs"
 },
 {
-"blurb": "Russell T Davies psychological thriller. Limited series.",
+"blurb": "Russell T Davies psychological thriller. Alan Cumming and David Morrissey as feuding neighbors; it's billed as an LGBTQ+ drama about homophobia. Limited series.",
 "eps": "5",
 "kind": "binge",
 "order": 5,
