@@ -13,7 +13,24 @@ window.SHOWS = [
 "score": "Strong",
 "title": "Silo",
 "when": "All out. Final season 2027-07-09",
-"id": "silo"
+"id": "silo",
+"seasons": [
+[
+1,
+88,
+71
+],
+[
+2,
+92,
+68
+],
+[
+3,
+96,
+72
+]
+]
 },
 {
 "blurb": "The For All Mankind spinoff, told from the Soviet side of the space race.",
@@ -255,7 +272,19 @@ window.SHOWS = [
 "score": "",
 "title": "Dexter: Resurrection S2",
 "when": "Fridays, finale 2027-01-01",
-"id": "dexter-resurrection"
+"id": "dexter-resurrection",
+"seasons": [
+[
+1,
+95,
+91
+],
+[
+2,
+85,
+94
+]
+]
 },
 {
 "blurb": "Crime thriller with Liev Schreiber and Stephen Graham.",
@@ -355,7 +384,39 @@ window.SHOWS = [
 "score": "RT 98%",
 "title": "Slow Horses",
 "when": "All out. S6 aired fall 2026",
-"id": "slow-horses"
+"id": "slow-horses",
+"seasons": [
+[
+1,
+95,
+89
+],
+[
+2,
+100,
+90
+],
+[
+3,
+98,
+90
+],
+[
+4,
+100,
+89
+],
+[
+5,
+96,
+82
+],
+[
+6,
+98,
+78
+]
+]
 },
 {
 "blurb": "Keri Russell as a US ambassador in a political thriller.",
@@ -371,7 +432,29 @@ window.SHOWS = [
 "score": "RT 97%",
 "title": "The Diplomat",
 "when": "S4 dropped 2026-10-15",
-"id": "the-diplomat"
+"id": "the-diplomat",
+"seasons": [
+[
+1,
+84,
+62
+],
+[
+2,
+95,
+85
+],
+[
+3,
+97,
+76
+],
+[
+4,
+97,
+87
+]
+]
 },
 {
 "blurb": "Ethan Hawke as a Tulsa muckraker digging into local power.",
@@ -387,7 +470,19 @@ window.SHOWS = [
 "score": "MC 92",
 "title": "The Lowdown",
 "when": "S2 airing since 2026-10-14",
-"id": "the-lowdown"
+"id": "the-lowdown",
+"seasons": [
+[
+1,
+98,
+77
+],
+[
+2,
+100,
+79
+]
+]
 },
 {
 "blurb": "Aussie rom-com about a couple brought together by a scruffy dog. Half hours.",
@@ -403,7 +498,24 @@ window.SHOWS = [
 "score": "RT 100%",
 "title": "Colin From Accounts",
 "when": "All out",
-"id": "colin-from-accounts"
+"id": "colin-from-accounts",
+"seasons": [
+[
+1,
+100,
+91
+],
+[
+2,
+100,
+83
+],
+[
+3,
+100,
+95
+]
+]
 },
 {
 "blurb": "The feel-good football comedy. Season 4 just aired. Swipe up if you've seen it.",
@@ -419,7 +531,29 @@ window.SHOWS = [
 "score": "RT 90%",
 "title": "Ted Lasso",
 "when": "S4 aired fall 2026",
-"id": "ted-lasso"
+"id": "ted-lasso",
+"seasons": [
+[
+1,
+92,
+95
+],
+[
+2,
+98,
+87
+],
+[
+3,
+80,
+78
+],
+[
+4,
+90,
+65
+]
+]
 },
 {
 "blurb": "Blake Crouch multiverse sci-fi. You watched season 1.",
@@ -434,7 +568,24 @@ window.SHOWS = [
 "score": "",
 "title": "Dark Matter S2",
 "when": "All out (finished 2026-10-30)",
-"id": "dark-matter-s2"
+"id": "dark-matter-s2",
+"seasons": [
+[
+1,
+68,
+86
+],
+[
+2,
+100,
+91
+],
+[
+3,
+100,
+89
+]
+]
 },
 {
 "blurb": "Stallone mob comedy-drama. Airing now.",
@@ -450,7 +601,29 @@ window.SHOWS = [
 "score": "Positive",
 "title": "Tulsa King S4",
 "when": "Fridays, finale 2026-12-18",
-"id": "tulsa-king-s4"
+"id": "tulsa-king-s4",
+"seasons": [
+[
+1,
+78,
+87
+],
+[
+2,
+100,
+79
+],
+[
+3,
+83,
+59
+],
+[
+4,
+86,
+null
+]
+]
 },
 {
 "blurb": "Taylor Sheridan spy thriller with Zoe Saldana and Nicole Kidman.",
@@ -467,7 +640,24 @@ window.SHOWS = [
 "score": "",
 "title": "Lioness S3",
 "when": "All out (finished 2026-09-20)",
-"id": "lioness-s3"
+"id": "lioness-s3",
+"seasons": [
+[
+1,
+54,
+77
+],
+[
+2,
+90,
+73
+],
+[
+3,
+88,
+77
+]
+]
 },
 {
 "blurb": "Alan Ritchson punches his way through another town.",
@@ -484,7 +674,29 @@ window.SHOWS = [
 "score": "RT 87%",
 "title": "Reacher S4",
 "when": "All out (finished 2026-09-16)",
-"id": "reacher-s4"
+"id": "reacher-s4",
+"seasons": [
+[
+1,
+92,
+91
+],
+[
+2,
+98,
+77
+],
+[
+3,
+98,
+74
+],
+[
+4,
+92,
+64
+]
+]
 },
 {
 "blurb": "Guy Ritchie crime comedy: aristocrats and weed empires.",
@@ -501,7 +713,19 @@ window.SHOWS = [
 "score": "RT ~83%",
 "title": "The Gentlemen S2",
 "when": "All out (2026-09-03)",
-"id": "gentlemen-s2"
+"id": "gentlemen-s2",
+"seasons": [
+[
+1,
+75,
+85
+],
+[
+2,
+87,
+87
+]
+]
 },
 {
 "blurb": "Chris Pratt military revenge thriller.",
@@ -518,7 +742,19 @@ window.SHOWS = [
 "score": "Positive",
 "title": "The Terminal List S2",
 "when": "All out (2026-10-21)",
-"id": "terminal-list-s2"
+"id": "terminal-list-s2",
+"seasons": [
+[
+1,
+42,
+94
+],
+[
+2,
+75,
+90
+]
+]
 },
 {
 "blurb": "Keira Knightley and Ben Whishaw. London spy thriller with dark wit.",
@@ -535,7 +771,19 @@ window.SHOWS = [
 "score": "RT ~94% · MC 83",
 "title": "Black Doves S2",
 "when": "All out (2026-11-05)",
-"id": "black-doves-s2"
+"id": "black-doves-s2",
+"seasons": [
+[
+1,
+92,
+65
+],
+[
+2,
+97,
+67
+]
+]
 },
 {
 "blurb": "Kristen Bell and Adam Brody rom-com.",
@@ -552,7 +800,24 @@ window.SHOWS = [
 "score": "Mixed to positive",
 "title": "Nobody Wants This S3",
 "when": "All out (2026-10-22)",
-"id": "nobody-wants-this-s3"
+"id": "nobody-wants-this-s3",
+"seasons": [
+[
+1,
+95,
+85
+],
+[
+2,
+80,
+57
+],
+[
+3,
+83,
+67
+]
+]
 },
 {
 "blurb": "The Office team's newspaper mockumentary.",
@@ -569,7 +834,19 @@ window.SHOWS = [
 "score": "RT 85-89%",
 "title": "The Paper S2",
 "when": "All out (2026-09-09)",
-"id": "the-paper-s2"
+"id": "the-paper-s2",
+"seasons": [
+[
+1,
+85,
+71
+],
+[
+2,
+79,
+82
+]
+]
 },
 {
 "blurb": "Glen Powell college football comedy.",
@@ -586,7 +863,19 @@ window.SHOWS = [
 "score": "Still fun",
 "title": "Chad Powers S2",
 "when": "All out (2026-09-03)",
-"id": "chad-powers-s2"
+"id": "chad-powers-s2",
+"seasons": [
+[
+1,
+60,
+85
+],
+[
+2,
+93,
+92
+]
+]
 },
 {
 "blurb": "Warm British comedy about a couple and their adopted kids.",
@@ -603,7 +892,34 @@ window.SHOWS = [
 "score": "",
 "title": "Trying S5",
 "when": "All out (finished 2026-08-26)",
-"id": "trying-s5"
+"id": "trying-s5",
+"seasons": [
+[
+1,
+88,
+92
+],
+[
+2,
+100,
+95
+],
+[
+3,
+null,
+86
+],
+[
+4,
+100,
+82
+],
+[
+5,
+100,
+74
+]
+]
 },
 {
 "blurb": "Omar Sy French heist thriller.",
@@ -620,7 +936,29 @@ window.SHOWS = [
 "score": "Positive",
 "title": "Lupin Part 4",
 "when": "All out (2026-10-23)",
-"id": "lupin-4"
+"id": "lupin-4",
+"seasons": [
+[
+1,
+98,
+81
+],
+[
+2,
+96,
+79
+],
+[
+3,
+100,
+77
+],
+[
+4,
+100,
+17
+]
+]
 },
 {
 "blurb": "Israeli counterterror thriller.",
@@ -636,7 +974,34 @@ window.SHOWS = [
 "score": "Mixed",
 "title": "Fauda S5",
 "when": "All out (2026-09-08)",
-"id": "fauda-s5"
+"id": "fauda-s5",
+"seasons": [
+[
+1,
+100,
+86
+],
+[
+2,
+100,
+83
+],
+[
+3,
+100,
+76
+],
+[
+4,
+100,
+84
+],
+[
+5,
+null,
+87
+]
+]
 },
 {
 "blurb": "UK cyber-spy thriller with Simon Pegg.",
@@ -652,7 +1017,19 @@ window.SHOWS = [
 "score": "",
 "title": "The Undeclared War S2",
 "when": "All out (2026-08-27)",
-"id": "undeclared-war-s2"
+"id": "undeclared-war-s2",
+"seasons": [
+[
+1,
+68,
+72
+],
+[
+2,
+57,
+null
+]
+]
 },
 {
 "blurb": "The Gang, still terrible people.",
@@ -669,7 +1046,99 @@ window.SHOWS = [
 "score": "",
 "title": "It's Always Sunny S18",
 "when": "All out (fall 2026)",
-"id": "always-sunny-s18"
+"id": "always-sunny-s18",
+"seasons": [
+[
+1,
+76,
+88
+],
+[
+2,
+96,
+96
+],
+[
+3,
+90,
+97
+],
+[
+4,
+100,
+97
+],
+[
+5,
+94,
+97
+],
+[
+6,
+94,
+96
+],
+[
+7,
+100,
+96
+],
+[
+8,
+100,
+97
+],
+[
+9,
+100,
+97
+],
+[
+10,
+100,
+97
+],
+[
+11,
+100,
+96
+],
+[
+12,
+90,
+91
+],
+[
+13,
+94,
+76
+],
+[
+14,
+83,
+86
+],
+[
+15,
+100,
+73
+],
+[
+16,
+100,
+79
+],
+[
+17,
+84,
+79
+],
+[
+18,
+100,
+78
+]
+]
 },
 {
 "blurb": "Gen Z roommates comedy.",
@@ -686,7 +1155,19 @@ window.SHOWS = [
 "score": "AV Club A-",
 "title": "Adults S2",
 "when": "All out (finished 2026-09-17)",
-"id": "adults-s2"
+"id": "adults-s2",
+"seasons": [
+[
+1,
+77,
+85
+],
+[
+2,
+100,
+96
+]
+]
 },
 {
 "blurb": "Julian Fellowes period drama in old New York. Airing now.",
@@ -703,7 +1184,29 @@ window.SHOWS = [
 "score": "Strong",
 "title": "The Gilded Age S4",
 "when": "Sundays, finale ~2026-12-20",
-"id": "gilded-age-s4"
+"id": "gilded-age-s4",
+"seasons": [
+[
+1,
+79,
+60
+],
+[
+2,
+94,
+64
+],
+[
+3,
+96,
+85
+],
+[
+4,
+95,
+77
+]
+]
 },
 {
 "blurb": "Owen Wilson golf comedy. Airing now.",
@@ -720,7 +1223,19 @@ window.SHOWS = [
 "score": "",
 "title": "Stick S2",
 "when": "Weekly, finale 2026-12-30",
-"id": "stick-s2"
+"id": "stick-s2",
+"seasons": [
+[
+1,
+81,
+72
+],
+[
+2,
+100,
+91
+]
+]
 },
 {
 "blurb": "German dark comedy (subtitled). Airing now.",
@@ -735,7 +1250,19 @@ window.SHOWS = [
 "score": "",
 "title": "Where's Wanda? S2",
 "when": "Weekly, finale 2026-12-09",
-"id": "wheres-wanda-s2"
+"id": "wheres-wanda-s2",
+"seasons": [
+[
+1,
+100,
+70
+],
+[
+2,
+null,
+null
+]
+]
 },
 {
 "blurb": "Brazilian crime drama (subtitled). Airing now.",
@@ -750,7 +1277,19 @@ window.SHOWS = [
 "score": "",
 "title": "City of God: The Fight Rages On S2",
 "when": "Sundays, finale 2026-12-13",
-"id": "city-of-god-s2"
+"id": "city-of-god-s2",
+"seasons": [
+[
+1,
+80,
+68
+],
+[
+2,
+null,
+null
+]
+]
 },
 {
 "blurb": "Stephen King sci-fi thriller. Airing now.",
@@ -765,7 +1304,19 @@ window.SHOWS = [
 "score": "",
 "title": "The Institute S2",
 "when": "Weekly since 2026-11-08",
-"id": "the-institute-s2"
+"id": "the-institute-s2",
+"seasons": [
+[
+1,
+64,
+69
+],
+[
+2,
+null,
+null
+]
+]
 },
 {
 "blurb": "School mockumentary comedy. Airing now, runs into spring.",
@@ -780,7 +1331,39 @@ window.SHOWS = [
 "score": "",
 "title": "Abbott Elementary S6",
 "when": "Wednesdays since 2026-10-07",
-"id": "abbott-s6"
+"id": "abbott-s6",
+"seasons": [
+[
+1,
+98,
+89
+],
+[
+2,
+100,
+91
+],
+[
+3,
+100,
+87
+],
+[
+4,
+100,
+92
+],
+[
+5,
+100,
+85
+],
+[
+6,
+null,
+null
+]
+]
 },
 {
 "blurb": "The Scrubs revival. Airing now.",
@@ -796,7 +1379,19 @@ window.SHOWS = [
 "score": "",
 "title": "Scrubs (revival) S2",
 "when": "Wednesdays since 2026-09-30",
-"id": "scrubs-s2"
+"id": "scrubs-s2",
+"seasons": [
+[
+1,
+90,
+92
+],
+[
+2,
+100,
+null
+]
+]
 },
 {
 "blurb": "Keeley Hawes as a retired assassin. Dark, funny thriller.",
@@ -811,7 +1406,19 @@ window.SHOWS = [
 "score": "",
 "title": "The Assassin S2",
 "when": "All at once, ~2026-11-19",
-"id": "the-assassin-s2"
+"id": "the-assassin-s2",
+"seasons": [
+[
+1,
+72,
+43
+],
+[
+2,
+null,
+null
+]
+]
 },
 {
 "blurb": "Brittany Snow and Malin Akerman. Trashy-fun East Texas socialite thriller.",
@@ -826,7 +1433,19 @@ window.SHOWS = [
 "score": "",
 "title": "The Hunting Wives S2",
 "when": "2026-11-26",
-"id": "hunting-wives-s2"
+"id": "hunting-wives-s2",
+"seasons": [
+[
+1,
+81,
+65
+],
+[
+2,
+null,
+null
+]
+]
 },
 {
 "blurb": "Vince Vaughn Florida crime comedy.",
@@ -841,7 +1460,19 @@ window.SHOWS = [
 "score": "",
 "title": "Bad Monkey S2",
 "when": "Weekly 2026-12-02 to 2027-02-03",
-"id": "bad-monkey-s2"
+"id": "bad-monkey-s2",
+"seasons": [
+[
+1,
+92,
+82
+],
+[
+2,
+null,
+null
+]
+]
 },
 {
 "blurb": "Southern strip-club drama, final season.",
@@ -856,7 +1487,24 @@ window.SHOWS = [
 "score": "",
 "title": "P-Valley S3 (final)",
 "when": "From 2026-12-04",
-"id": "p-valley-s3"
+"id": "p-valley-s3",
+"seasons": [
+[
+1,
+100,
+89
+],
+[
+2,
+90,
+99
+],
+[
+3,
+null,
+null
+]
+]
 },
 {
 "blurb": "Martin, Short and Gomez solve one in London.",
@@ -871,7 +1519,39 @@ window.SHOWS = [
 "score": "",
 "title": "Only Murders in the Building S6",
 "when": "Tuesdays from 2026-12-08",
-"id": "only-murders-s6"
+"id": "only-murders-s6",
+"seasons": [
+[
+1,
+100,
+94
+],
+[
+2,
+98,
+92
+],
+[
+3,
+97,
+89
+],
+[
+4,
+93,
+88
+],
+[
+5,
+89,
+83
+],
+[
+6,
+null,
+null
+]
+]
 },
 {
 "blurb": "Big-idea sci-fi from the Game of Thrones creators.",
@@ -901,6 +1581,33 @@ window.SHOWS = [
 "score": "",
 "title": "Mayor of Kingstown S5 (final)",
 "when": "From 2027-01-15",
-"id": "mayor-kingstown-s5"
+"id": "mayor-kingstown-s5",
+"seasons": [
+[
+1,
+31,
+86
+],
+[
+2,
+50,
+83
+],
+[
+3,
+78,
+80
+],
+[
+4,
+100,
+88
+],
+[
+5,
+null,
+null
+]
+]
 }
 ];

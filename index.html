@@ -55,6 +55,7 @@ h2 { font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-heig
 .facts { margin: auto 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .fact { background: rgba(255,255,255,.03); border: 1px solid var(--line); border-radius: 12px; padding: 8px 11px; min-width: 0; }
 .fact dt { font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); margin: 0 0 2px; }
+.fact.s1 dd { font-size: .82rem; word-spacing: 2px; }
 .fact dd { margin: 0; font-size: .9rem; font-weight: 500; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .fact.wide { grid-column: 1 / -1; }
 .fact.s1 { border-color: #4a3d5c; } .fact.s1 dt { color: var(--s1); }
@@ -179,7 +180,14 @@ textarea { width: 100%; min-height: 120px; background: var(--bg); color: var(--f
     add("Episodes", s.eps);
     if (hasRt) { add("RT critics" + ss, pct(s.rtCritics) || "Not yet"); add("RT audience" + ss, pct(s.rtAudience) || "Not yet"); add("When", s.when); }
     else { add("Reviews", s.score); add("When", s.when, true); }
-    if (typeof s.s1Critics === "number" || typeof s.s1Audience === "number") {
+    if (Array.isArray(s.seasons) && s.seasons.length > 1) {
+      let list = s.seasons;
+      const fmt = (x) => "S" + x[0] + " " + (x[1] == null ? "--" : x[1]) + "/" + (x[2] == null ? "--" : x[2]);
+      let txt = list.length > 8 ? list.slice(0, 3).map(fmt).join("  ") + "  ...  " + list.slice(-3).map(fmt).join("  ") : list.map(fmt).join("  ");
+      const f = el("div", "fact wide s1");
+      f.append(el("dt", null, "Every season · RT critics/audience"), el("dd", null, txt));
+      facts.append(f);
+    } else if (typeof s.s1Critics === "number" || typeof s.s1Audience === "number") {
       const f = el("div", "fact wide s1");
       f.append(el("dt", null, "Season 1, if you'd start from the top"), el("dd", null, "RT critics " + (pct(s.s1Critics) || "n/a") + "  ·  audience " + (pct(s.s1Audience) || "n/a")));
       facts.append(f);
