@@ -30,7 +30,8 @@ window.SHOWS = [
 96,
 72
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=8ZYhuvIv1pA"
 },
 {
 "blurb": "The For All Mankind spinoff, told from the Soviet side of the space race.",
@@ -45,7 +46,8 @@ window.SHOWS = [
 "score": "RT 94%",
 "title": "Star City",
 "when": "All out (finished 2026-07-10)",
-"id": "star-city"
+"id": "star-city",
+"trailer": "https://www.youtube.com/watch?v=V-yAMs307W4"
 },
 {
 "blurb": "Gentle, surreal British comedy from the Detectorists creator, with Michael Palin. Best-reviewed show of 2026.",
@@ -60,7 +62,8 @@ window.SHOWS = [
 "score": "RT 100% · MC 87",
 "title": "Small Prophets",
 "when": "All out (finished 2026-11-04)",
-"id": "small-prophets"
+"id": "small-prophets",
+"trailer": "https://www.youtube.com/watch?v=W7vdQWnaZts"
 },
 {
 "blurb": "Serial killer crime thriller with Emmy Rossum.",
@@ -75,7 +78,8 @@ window.SHOWS = [
 "score": "RT 99% · MC 81",
 "title": "Furious",
 "when": "All out (finished 2026-08-31)",
-"id": "furious"
+"id": "furious",
+"trailer": "https://www.youtube.com/watch?v=UBSqPDxmNZs"
 },
 {
 "blurb": "Russell T Davies psychological thriller. Limited series.",
@@ -90,7 +94,8 @@ window.SHOWS = [
 "score": "RT 97% · MC 85",
 "title": "Tip Toe",
 "when": "All out (October 2026)",
-"id": "tip-toe"
+"id": "tip-toe",
+"trailer": "https://www.youtube.com/watch?v=pwvpMfXCTHc"
 },
 {
 "blurb": "Dark comedy thriller with Tatiana Maslany.",
@@ -105,7 +110,8 @@ window.SHOWS = [
 "score": "RT 94%",
 "title": "Maximum Pleasure Guaranteed",
 "when": "All out (finished 2026-07-15)",
-"id": "maximum-pleasure"
+"id": "maximum-pleasure",
+"trailer": "https://www.youtube.com/results?search_query=Maximum+Pleasure+Guaranteed+official+trailer"
 },
 {
 "blurb": "Sharon Horgan midlife comedy-drama. Half-hour episodes.",
@@ -120,7 +126,8 @@ window.SHOWS = [
 "score": "RT 94% · MC 82",
 "title": "Youth",
 "when": "All out (finished 2026-11-01)",
-"id": "youth"
+"id": "youth",
+"trailer": "https://www.youtube.com/watch?v=dpeZE1PZmMo"
 },
 {
 "blurb": "Action comedy with Hannah Waddingham and Octavia Spencer. Cancelled after one season.",
@@ -135,7 +142,8 @@ window.SHOWS = [
 "score": "RT 96%",
 "title": "Ride or Die",
 "when": "All out (2026-07-15)",
-"id": "ride-or-die"
+"id": "ride-or-die",
+"trailer": "https://www.youtube.com/results?search_query=Ride+or+Die+official+trailer"
 },
 {
 "blurb": "Reacher spinoff. Action crime.",
@@ -150,7 +158,8 @@ window.SHOWS = [
 "score": "RT 94%",
 "title": "Neagley",
 "when": "All out (2026-09-16)",
-"id": "neagley"
+"id": "neagley",
+"trailer": "https://www.youtube.com/results?search_query=Neagley+official+trailer"
 },
 {
 "blurb": "DC show played like True Detective. Two cops, a murder in the heartland.",
@@ -165,7 +174,8 @@ window.SHOWS = [
 "score": "RT 92%",
 "title": "Lanterns",
 "when": "All out (finished 2026-10-04)",
-"id": "lanterns"
+"id": "lanterns",
+"trailer": "https://www.youtube.com/watch?v=7UIBOsuUwc4"
 },
 {
 "blurb": "Australian missing-person thriller.",
@@ -180,7 +190,8 @@ window.SHOWS = [
 "score": "RT 89%",
 "title": "Last Seen",
 "when": "All out (finished 2026-10-07)",
-"id": "last-seen"
+"id": "last-seen",
+"trailer": "https://www.youtube.com/watch?v=M8nHySkLb64"
 },
 {
 "blurb": "Florence Pugh in a prestige Steinbeck limited series.",
@@ -195,7 +206,8 @@ window.SHOWS = [
 "score": "RT 88% · MC 80",
 "title": "East of Eden",
 "when": "All out (2026-10-01)",
-"id": "east-of-eden"
+"id": "east-of-eden",
+"trailer": "https://www.youtube.com/watch?v=M9NWvGZViCg"
 },
 {
 "blurb": "Muhammad Ali drama, the first authorized scripted series about him.",
@@ -209,7 +221,8 @@ window.SHOWS = [
 "score": "RT 85%",
 "title": "The Greatest",
 "when": "All out (2026-11-04)",
-"id": "the-greatest"
+"id": "the-greatest",
+"trailer": "https://www.youtube.com/watch?v=RnRf-r-RdA4"
 },
 {
 "blurb": "Darkly comic true crime with Jon Hamm.",
@@ -224,7 +237,8 @@ window.SHOWS = [
 "score": "RT 85%, mixed",
 "title": "American Hostage",
 "when": "All out (finished 2026-11-01)",
-"id": "american-hostage"
+"id": "american-hostage",
+"trailer": "https://www.youtube.com/watch?v=B01SUM_ixo0"
 },
 {
 "blurb": "Anya Taylor-Joy crime thriller. Your old maybe. She's great; critics split on the show.",
@@ -239,7 +253,8 @@ window.SHOWS = [
 "score": "RT 80%",
 "title": "Lucky",
 "when": "All out (finished 2026-08-19)",
-"id": "lucky"
+"id": "lucky",
+"trailer": "https://www.youtube.com/watch?v=GAbT5qCTXR8"
 },
 {
 "blurb": "Rose Byrne and Meghann Fahy as estranged sisters pulled into a new crime.",
@@ -254,7 +269,8 @@ window.SHOWS = [
 "score": "Mixed to positive",
 "title": "The Good Daughter",
 "when": "All out (2026-11-12)",
-"id": "good-daughter"
+"id": "good-daughter",
+"trailer": "https://www.youtube.com/watch?v=TEVgV_pdavU"
 },
 {
 "blurb": "Michael C. Hall back as Dexter. Season 1 aired summer 2025; swipe up if you've seen it.",
@@ -284,7 +300,8 @@ window.SHOWS = [
 85,
 94
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=nTOf1FIsBcs"
 },
 {
 "blurb": "Crime thriller with Liev Schreiber and Stephen Graham.",
@@ -299,7 +316,8 @@ window.SHOWS = [
 "score": "Mostly positive",
 "title": "Nocturne",
 "when": "Weekly, finale 2026-12-25",
-"id": "nocturne"
+"id": "nocturne",
+"trailer": "https://www.youtube.com/watch?v=AaEy1f2Dgys"
 },
 {
 "blurb": "Silicon Valley legal drama from The Good Wife creators. A long network season.",
@@ -314,7 +332,8 @@ window.SHOWS = [
 "score": "RT 100% · MC 85",
 "title": "Cupertino",
 "when": "Thursdays since 2026-10-08",
-"id": "cupertino"
+"id": "cupertino",
+"trailer": "https://www.youtube.com/watch?v=GMQXI9SP7T0"
 },
 {
 "blurb": "Divorce drama with Dominic West and Sienna Miller.",
@@ -329,7 +348,8 @@ window.SHOWS = [
 "score": "RT 85%, mixed",
 "title": "War",
 "when": "Finale 2026-11-19",
-"id": "war"
+"id": "war",
+"trailer": "https://www.youtube.com/watch?v=ZybkHGaoPvQ"
 },
 {
 "blurb": "Amy Poehler comedy: archaeologists stumble onto an international conspiracy in Greece.",
@@ -342,7 +362,8 @@ window.SHOWS = [
 "score": "Not reviewed yet",
 "title": "Dig",
 "when": "2026-11-23",
-"id": "dig"
+"id": "dig",
+"trailer": "https://www.youtube.com/watch?v=ir2zni8_tP4"
 },
 {
 "blurb": "Limited series set 50 years after Blade Runner 2049.",
@@ -355,7 +376,8 @@ window.SHOWS = [
 "score": "Not reviewed yet",
 "title": "Blade Runner 2099",
 "when": "2026-11-25",
-"id": "blade-runner-2099"
+"id": "blade-runner-2099",
+"trailer": "https://www.youtube.com/watch?v=1d4x_eSdqNc"
 },
 {
 "blurb": "The new book-by-book TV adaptation, starting with Philosopher's Stone.",
@@ -368,7 +390,8 @@ window.SHOWS = [
 "score": "",
 "title": "Harry Potter (series)",
 "when": "Around Christmas (date not confirmed)",
-"id": "harry-potter"
+"id": "harry-potter",
+"trailer": "https://www.youtube.com/results?search_query=Harry+Potter+%28series%29+official+trailer"
 },
 {
 "blurb": "Gary Oldman leads a unit of washed-up MI5 spies. Dark, funny spy thriller.",
@@ -416,7 +439,8 @@ window.SHOWS = [
 98,
 78
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=O9ZJChzPn0U"
 },
 {
 "blurb": "Keri Russell as a US ambassador in a political thriller.",
@@ -454,7 +478,8 @@ window.SHOWS = [
 97,
 87
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=lV6sJlBbhPs"
 },
 {
 "blurb": "Ethan Hawke as a Tulsa muckraker digging into local power.",
@@ -482,7 +507,8 @@ window.SHOWS = [
 100,
 79
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=cE9bq37W3Qo"
 },
 {
 "blurb": "Aussie rom-com about a couple brought together by a scruffy dog. Half hours.",
@@ -515,7 +541,8 @@ window.SHOWS = [
 100,
 95
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=CRMnbfZfoMw"
 },
 {
 "blurb": "The feel-good football comedy. Season 4 just aired. Swipe up if you've seen it.",
@@ -553,7 +580,8 @@ window.SHOWS = [
 90,
 65
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=3u7EIiohs6U"
 },
 {
 "blurb": "Blake Crouch multiverse sci-fi. You watched season 1.",
@@ -585,7 +613,8 @@ window.SHOWS = [
 100,
 89
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=zhB6_1UbR7s"
 },
 {
 "blurb": "Stallone mob comedy-drama. Airing now.",
@@ -623,7 +652,8 @@ window.SHOWS = [
 86,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=Qq8yAg8urfY"
 },
 {
 "blurb": "Taylor Sheridan spy thriller with Zoe Saldana and Nicole Kidman.",
@@ -657,7 +687,8 @@ null
 88,
 77
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=OrunH41K3Ps"
 },
 {
 "blurb": "Alan Ritchson punches his way through another town.",
@@ -696,7 +727,8 @@ null
 92,
 64
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=PCbp1FfipPg"
 },
 {
 "blurb": "Guy Ritchie crime comedy: aristocrats and weed empires.",
@@ -725,7 +757,8 @@ null
 87,
 87
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=01IeKpHvgvM"
 },
 {
 "blurb": "Chris Pratt military revenge thriller.",
@@ -754,7 +787,8 @@ null
 75,
 90
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=sGmhziz9MoE"
 },
 {
 "blurb": "Keira Knightley and Ben Whishaw. London spy thriller with dark wit.",
@@ -783,7 +817,8 @@ null
 97,
 67
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=MOU2thjq6Z0"
 },
 {
 "blurb": "Kristen Bell and Adam Brody rom-com.",
@@ -817,7 +852,8 @@ null
 83,
 67
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=XETbiJM2LZ0"
 },
 {
 "blurb": "The Office team's newspaper mockumentary.",
@@ -846,7 +882,8 @@ null
 79,
 82
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=m0egsFCDTIo"
 },
 {
 "blurb": "Glen Powell college football comedy.",
@@ -875,7 +912,8 @@ null
 93,
 92
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=-8B59O_18Dc"
 },
 {
 "blurb": "Warm British comedy about a couple and their adopted kids.",
@@ -919,7 +957,8 @@ null,
 100,
 74
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=8-_Oxuozsw4"
 },
 {
 "blurb": "Omar Sy French heist thriller.",
@@ -958,7 +997,8 @@ null,
 100,
 17
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=Vr4zLkYblMA"
 },
 {
 "blurb": "Israeli counterterror thriller.",
@@ -1001,7 +1041,8 @@ null,
 null,
 87
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=tDKXX3j1lIg"
 },
 {
 "blurb": "UK cyber-spy thriller with Simon Pegg.",
@@ -1029,7 +1070,8 @@ null,
 57,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=YfBspYmaXtI"
 },
 {
 "blurb": "The Gang, still terrible people.",
@@ -1138,7 +1180,8 @@ null
 100,
 78
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=0uGkGEwOZs8"
 },
 {
 "blurb": "Gen Z roommates comedy.",
@@ -1167,7 +1210,8 @@ null
 100,
 96
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=w95VlAAP6nw"
 },
 {
 "blurb": "Julian Fellowes period drama in old New York. Airing now.",
@@ -1206,7 +1250,8 @@ null
 95,
 77
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=MqRa6X31lUk"
 },
 {
 "blurb": "Owen Wilson golf comedy. Airing now.",
@@ -1235,7 +1280,8 @@ null
 100,
 91
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=m6ArXts5JPk"
 },
 {
 "blurb": "German dark comedy (subtitled). Airing now.",
@@ -1262,7 +1308,8 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=7B6D8x5yxh4"
 },
 {
 "blurb": "Brazilian crime drama (subtitled). Airing now.",
@@ -1289,7 +1336,8 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=S5JU1dNaJj4"
 },
 {
 "blurb": "Stephen King sci-fi thriller. Airing now.",
@@ -1316,7 +1364,8 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=mqMd-28kDa4"
 },
 {
 "blurb": "School mockumentary comedy. Airing now, runs into spring.",
@@ -1363,7 +1412,8 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=fOYw_5mcwUw"
 },
 {
 "blurb": "The Scrubs revival. Airing now.",
@@ -1391,7 +1441,8 @@ null
 100,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=PYvHf75iiRw"
 },
 {
 "blurb": "Keeley Hawes as a retired assassin. Dark, funny thriller.",
@@ -1418,7 +1469,8 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=iVtOHJkiM1A"
 },
 {
 "blurb": "Brittany Snow and Malin Akerman. Trashy-fun East Texas socialite thriller.",
@@ -1445,7 +1497,8 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=-0z2MNtsvu0"
 },
 {
 "blurb": "Vince Vaughn Florida crime comedy.",
@@ -1472,7 +1525,8 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=9ZiePpwIlAE"
 },
 {
 "blurb": "Southern strip-club drama, final season.",
@@ -1504,7 +1558,8 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=DGKHIliKyOY"
 },
 {
 "blurb": "Martin, Short and Gomez solve one in London.",
@@ -1551,7 +1606,8 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=ESxN0pp7weM"
 },
 {
 "blurb": "Big-idea sci-fi from the Game of Thrones creators.",
@@ -1566,7 +1622,8 @@ null
 "score": "",
 "title": "3 Body Problem S2",
 "when": "2027-01-14",
-"id": "three-body-s2"
+"id": "three-body-s2",
+"trailer": "https://www.youtube.com/watch?v=CXjtTjREZG8"
 },
 {
 "blurb": "Jeremy Renner Sheridan prison-town crime drama, final season.",
@@ -1608,6 +1665,7 @@ null
 null,
 null
 ]
-]
+],
+"trailer": "https://www.youtube.com/watch?v=bOPpsWACE5Y"
 }
 ];

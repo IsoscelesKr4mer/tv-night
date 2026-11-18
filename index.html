@@ -45,6 +45,9 @@ h1 span { color: var(--lamp); }
 .top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .plat { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 600; }
 .plat i { width: 10px; height: 10px; border-radius: 50%; background: var(--dim); }
+.topr { display: flex; align-items: center; gap: 8px; }
+.trailer { font-size: .78rem; font-weight: 600; color: #1a1405; background: var(--lamp); padding: 5px 10px; border-radius: 999px; text-decoration: none; white-space: nowrap; }
+.trailer:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 .kind { font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--dim); }
 .kind.airing { color: var(--yes); } .kind.soon { color: var(--seen); } .kind.binge { color: var(--lamp); } .kind.start, .kind.returning { color: var(--s1); }
 .head { display: grid; grid-template-columns: 104px 1fr; gap: 14px; align-items: start; }
@@ -167,7 +170,14 @@ textarea { width: 100%; min-height: 120px; background: var(--bg); color: var(--f
     const top = el("div", "top"); const plat = el("span", "plat"); const dot = el("i");
     dot.style.background = "var(--" + (s.p || "x") + ", var(--dim))";
     plat.append(dot, document.createTextNode(s.platform || ""));
-    top.append(plat, el("span", "kind " + (s.kind || ""), kindLabel[s.kind] || ""));
+    const right = el("div", "topr");
+    if (s.trailer) {
+      const a = el("a", "trailer", "▶ Trailer"); a.href = s.trailer; a.target = "_blank"; a.rel = "noopener";
+      a.addEventListener("pointerdown", (e) => e.stopPropagation());
+      right.append(a);
+    }
+    right.append(el("span", "kind " + (s.kind || ""), kindLabel[s.kind] || ""));
+    top.append(plat, right);
     const head = el("div", "head");
     if (s.poster) { const img = el("img", "poster"); img.alt = s.title + " poster"; img.draggable = false; img.src = s.poster; img.onerror = () => { img.remove(); head.classList.add("noposter"); }; head.append(img); }
     else head.classList.add("noposter");
