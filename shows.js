@@ -301,7 +301,8 @@ window.SHOWS = [
 94
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=nTOf1FIsBcs"
+"trailer": "https://www.youtube.com/watch?v=nTOf1FIsBcs",
+"s1trailer": "https://www.youtube.com/watch?v=84o1Q6fB20k"
 },
 {
 "blurb": "Crime thriller with Liev Schreiber and Stephen Graham.",
@@ -614,7 +615,8 @@ window.SHOWS = [
 89
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=zhB6_1UbR7s"
+"trailer": "https://www.youtube.com/watch?v=zhB6_1UbR7s",
+"s1trailer": "https://www.youtube.com/results?search_query=Dark+Matter+season+1+official+trailer"
 },
 {
 "blurb": "Stallone mob comedy-drama. Airing now.",
@@ -653,7 +655,8 @@ window.SHOWS = [
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=Qq8yAg8urfY"
+"trailer": "https://www.youtube.com/watch?v=Qq8yAg8urfY",
+"s1trailer": "https://www.youtube.com/results?search_query=Tulsa+King+season+1+official+trailer"
 },
 {
 "blurb": "Taylor Sheridan spy thriller with Zoe Saldana and Nicole Kidman.",
@@ -688,7 +691,8 @@ null
 77
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=OrunH41K3Ps"
+"trailer": "https://www.youtube.com/watch?v=OrunH41K3Ps",
+"s1trailer": "https://www.youtube.com/watch?v=Y11p6YzdKHw"
 },
 {
 "blurb": "Alan Ritchson punches his way through another town.",
@@ -728,7 +732,8 @@ null
 64
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=PCbp1FfipPg"
+"trailer": "https://www.youtube.com/watch?v=PCbp1FfipPg",
+"s1trailer": "https://www.youtube.com/watch?v=GSycMV-_Csw"
 },
 {
 "blurb": "Guy Ritchie crime comedy: aristocrats and weed empires.",
@@ -758,7 +763,8 @@ null
 87
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=01IeKpHvgvM"
+"trailer": "https://www.youtube.com/watch?v=01IeKpHvgvM",
+"s1trailer": "https://www.youtube.com/watch?v=wyEOwHrpZH4"
 },
 {
 "blurb": "Chris Pratt military revenge thriller.",
@@ -788,7 +794,8 @@ null
 90
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=sGmhziz9MoE"
+"trailer": "https://www.youtube.com/watch?v=sGmhziz9MoE",
+"s1trailer": "https://www.youtube.com/watch?v=x9FvvsC0B5Q"
 },
 {
 "blurb": "Keira Knightley and Ben Whishaw. London spy thriller with dark wit.",
@@ -818,7 +825,8 @@ null
 67
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=MOU2thjq6Z0"
+"trailer": "https://www.youtube.com/watch?v=MOU2thjq6Z0",
+"s1trailer": "https://www.youtube.com/watch?v=1R0d2jW7a-I"
 },
 {
 "blurb": "Kristen Bell and Adam Brody rom-com.",
@@ -853,7 +861,8 @@ null
 67
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=XETbiJM2LZ0"
+"trailer": "https://www.youtube.com/watch?v=XETbiJM2LZ0",
+"s1trailer": "https://www.youtube.com/results?search_query=Nobody+Wants+This+season+1+official+trailer"
 },
 {
 "blurb": "The Office team's newspaper mockumentary.",
@@ -883,7 +892,8 @@ null
 82
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=m0egsFCDTIo"
+"trailer": "https://www.youtube.com/watch?v=m0egsFCDTIo",
+"s1trailer": "https://www.youtube.com/watch?v=mljFe2FD7ow"
 },
 {
 "blurb": "Glen Powell college football comedy.",
@@ -913,7 +923,8 @@ null
 92
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=-8B59O_18Dc"
+"trailer": "https://www.youtube.com/watch?v=-8B59O_18Dc",
+"s1trailer": "https://www.youtube.com/watch?v=YtV1-h2ORZc"
 },
 {
 "blurb": "Warm British comedy about a couple and their adopted kids.",
@@ -958,7 +969,8 @@ null,
 74
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=8-_Oxuozsw4"
+"trailer": "https://www.youtube.com/watch?v=8-_Oxuozsw4",
+"s1trailer": "https://www.youtube.com/watch?v=nGA_6WTD3vM"
 },
 {
 "blurb": "Omar Sy French heist thriller.",
@@ -998,7 +1010,8 @@ null,
 17
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=Vr4zLkYblMA"
+"trailer": "https://www.youtube.com/watch?v=Vr4zLkYblMA",
+"s1trailer": "https://www.youtube.com/watch?v=ga0iTWXCGa0"
 },
 {
 "blurb": "Israeli counterterror thriller.",
@@ -1042,7 +1055,8 @@ null,
 87
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=tDKXX3j1lIg"
+"trailer": "https://www.youtube.com/watch?v=tDKXX3j1lIg",
+"s1trailer": "https://www.youtube.com/results?search_query=Fauda+season+1+official+trailer"
 },
 {
 "blurb": "UK cyber-spy thriller with Simon Pegg.",
@@ -1071,7 +1085,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=YfBspYmaXtI"
+"trailer": "https://www.youtube.com/watch?v=YfBspYmaXtI",
+"s1trailer": "https://www.youtube.com/results?search_query=The+Undeclared+War+season+1+official+trailer"
 },
 {
 "blurb": "The Gang, still terrible people.",
@@ -1181,7 +1196,8 @@ null
 78
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=0uGkGEwOZs8"
+"trailer": "https://www.youtube.com/watch?v=0uGkGEwOZs8",
+"s1trailer": "https://www.youtube.com/watch?v=VnXC3BAGR5s"
 },
 {
 "blurb": "Gen Z roommates comedy.",
@@ -1211,7 +1227,8 @@ null
 96
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=w95VlAAP6nw"
+"trailer": "https://www.youtube.com/watch?v=w95VlAAP6nw",
+"s1trailer": "https://www.youtube.com/watch?v=Wf--nruQhEY"
 },
 {
 "blurb": "Julian Fellowes period drama in old New York. Airing now.",
@@ -1251,7 +1268,8 @@ null
 77
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=MqRa6X31lUk"
+"trailer": "https://www.youtube.com/watch?v=MqRa6X31lUk",
+"s1trailer": "https://www.youtube.com/watch?v=wKj1cMz3yfI"
 },
 {
 "blurb": "Owen Wilson golf comedy. Airing now.",
@@ -1281,7 +1299,8 @@ null
 91
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=m6ArXts5JPk"
+"trailer": "https://www.youtube.com/watch?v=m6ArXts5JPk",
+"s1trailer": "https://www.youtube.com/watch?v=72oB_zVF_6o"
 },
 {
 "blurb": "German dark comedy (subtitled). Airing now.",
@@ -1309,7 +1328,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=7B6D8x5yxh4"
+"trailer": "https://www.youtube.com/watch?v=7B6D8x5yxh4",
+"s1trailer": "https://www.youtube.com/watch?v=ULqwDPNiwjI"
 },
 {
 "blurb": "Brazilian crime drama (subtitled). Airing now.",
@@ -1337,7 +1357,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=S5JU1dNaJj4"
+"trailer": "https://www.youtube.com/watch?v=S5JU1dNaJj4",
+"s1trailer": "https://www.youtube.com/watch?v=TmcoiA1iTYM"
 },
 {
 "blurb": "Stephen King sci-fi thriller. Airing now.",
@@ -1365,7 +1386,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=mqMd-28kDa4"
+"trailer": "https://www.youtube.com/watch?v=mqMd-28kDa4",
+"s1trailer": "https://www.youtube.com/watch?v=1BcvAdfyL5Y"
 },
 {
 "blurb": "School mockumentary comedy. Airing now, runs into spring.",
@@ -1413,7 +1435,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=fOYw_5mcwUw"
+"trailer": "https://www.youtube.com/watch?v=fOYw_5mcwUw",
+"s1trailer": "https://www.youtube.com/watch?v=l4lP8roLz3I"
 },
 {
 "blurb": "The Scrubs revival. Airing now.",
@@ -1442,7 +1465,8 @@ null
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=PYvHf75iiRw"
+"trailer": "https://www.youtube.com/watch?v=PYvHf75iiRw",
+"s1trailer": "https://www.youtube.com/watch?v=nC-HxpuotPM"
 },
 {
 "blurb": "Keeley Hawes as a retired assassin. Dark, funny thriller.",
@@ -1470,7 +1494,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=iVtOHJkiM1A"
+"trailer": "https://www.youtube.com/watch?v=iVtOHJkiM1A",
+"s1trailer": "https://www.youtube.com/watch?v=qnyyaHNqk0Y"
 },
 {
 "blurb": "Brittany Snow and Malin Akerman. Trashy-fun East Texas socialite thriller.",
@@ -1498,7 +1523,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=-0z2MNtsvu0"
+"trailer": "https://www.youtube.com/watch?v=-0z2MNtsvu0",
+"s1trailer": "https://www.youtube.com/watch?v=6Nb51LHXS2g"
 },
 {
 "blurb": "Vince Vaughn Florida crime comedy.",
@@ -1526,7 +1552,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=9ZiePpwIlAE"
+"trailer": "https://www.youtube.com/watch?v=9ZiePpwIlAE",
+"s1trailer": "https://www.youtube.com/watch?v=RokJ4M2UjNc"
 },
 {
 "blurb": "Southern strip-club drama, final season.",
@@ -1559,7 +1586,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=DGKHIliKyOY"
+"trailer": "https://www.youtube.com/watch?v=DGKHIliKyOY",
+"s1trailer": "https://www.youtube.com/results?search_query=P-Valley+season+1+official+trailer"
 },
 {
 "blurb": "Martin, Short and Gomez solve one in London.",
@@ -1607,7 +1635,8 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=ESxN0pp7weM"
+"trailer": "https://www.youtube.com/watch?v=ESxN0pp7weM",
+"s1trailer": "https://www.youtube.com/watch?v=uTtaNEy3PDw"
 },
 {
 "blurb": "Big-idea sci-fi from the Game of Thrones creators.",
@@ -1623,7 +1652,8 @@ null
 "title": "3 Body Problem S2",
 "when": "2027-01-14",
 "id": "three-body-s2",
-"trailer": "https://www.youtube.com/watch?v=CXjtTjREZG8"
+"trailer": "https://www.youtube.com/watch?v=CXjtTjREZG8",
+"s1trailer": "https://www.youtube.com/watch?v=LfnO_bHVWHA"
 },
 {
 "blurb": "Jeremy Renner Sheridan prison-town crime drama, final season.",
@@ -1666,6 +1696,7 @@ null,
 null
 ]
 ],
-"trailer": "https://www.youtube.com/watch?v=bOPpsWACE5Y"
+"trailer": "https://www.youtube.com/watch?v=bOPpsWACE5Y",
+"s1trailer": "https://www.youtube.com/watch?v=17Ou5_Dk2Oo"
 }
 ];

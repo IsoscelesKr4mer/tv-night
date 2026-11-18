@@ -42,11 +42,12 @@ h1 span { color: var(--lamp); }
   border: 1px solid var(--line); border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 12px;
   box-shadow: 0 24px 60px -24px rgba(0,0,0,.8); user-select: none; -webkit-user-select: none; cursor: grab; will-change: transform; overflow: hidden; }
 .card.under { transform: scale(.95) translateY(14px); opacity: .55; pointer-events: none; }
-.top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 8px 10px; flex-wrap: wrap; }
 .plat { display: inline-flex; align-items: center; gap: 8px; font-size: .82rem; font-weight: 600; }
 .plat i { width: 10px; height: 10px; border-radius: 50%; background: var(--dim); }
-.topr { display: flex; align-items: center; gap: 8px; }
+.topr { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
 .trailer { font-size: .78rem; font-weight: 600; color: #1a1405; background: var(--lamp); padding: 5px 10px; border-radius: 999px; text-decoration: none; white-space: nowrap; }
+.trailer.s1t { background: var(--s1); }
 .trailer:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 .kind { font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--dim); }
 .kind.airing { color: var(--yes); } .kind.soon { color: var(--seen); } .kind.binge { color: var(--lamp); } .kind.start, .kind.returning { color: var(--s1); }
@@ -172,9 +173,14 @@ textarea { width: 100%; min-height: 120px; background: var(--bg); color: var(--f
     plat.append(dot, document.createTextNode(s.platform || ""));
     const right = el("div", "topr");
     if (s.trailer) {
-      const a = el("a", "trailer", "▶ Trailer"); a.href = s.trailer; a.target = "_blank"; a.rel = "noopener";
+      const a = el("a", "trailer", s.s1trailer ? "▶ New season" : "▶ Trailer"); a.href = s.trailer; a.target = "_blank"; a.rel = "noopener";
       a.addEventListener("pointerdown", (e) => e.stopPropagation());
       right.append(a);
+    }
+    if (s.s1trailer) {
+      const b = el("a", "trailer s1t", "▶ S1"); b.href = s.s1trailer; b.target = "_blank"; b.rel = "noopener"; b.title = "Season 1 trailer";
+      b.addEventListener("pointerdown", (e) => e.stopPropagation());
+      right.prepend(b);
     }
     right.append(el("span", "kind " + (s.kind || ""), kindLabel[s.kind] || ""));
     top.append(plat, right);
